@@ -45,6 +45,7 @@ pip install -r requirements.txt
 python app.py
 
 📬 Connect with Me
-📧 syedarfat0305@gmail.com
+📧 syedarfat0305@gmail.com || rajshriwastav889@gmail.com
+
 
 
