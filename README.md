@@ -1,51 +1,42 @@
-# 🧠 Text Sentiment Prediction
+# 🧠 Sentiment Analysis on E-Commerce Product Reviews
 
-Understand the emotions behind the words. 😊  
-A powerful AI-based sentiment analysis tool that classifies text reviews as Positive, Negative, or Neutral using Natural Language Processing (NLP).
+An NLP-based sentiment classifier that labels Amazon Alexa customer reviews as **Positive**, **Negative**, or **Neutral** — built to help surface actionable feedback from large volumes of unstructured review text.
 
----
+## Problem
 
-## 💻 Features
+E-commerce platforms collect thousands of product reviews, but manually reading through them to spot dissatisfaction trends doesn't scale. This project automates sentiment classification so product teams can quickly monitor customer feedback and catch issues early.
 
-- 🔍 Predict sentiment from any text input.
-- 📁 Upload CSV files to analyze multiple reviews at once.
-- 📊 Get graphical representation of sentiments.
-- 🌐 Clean and responsive web interface using HTML & CSS.
+## Approach
 
----
+1. **Data cleaning & preprocessing** — removed noise (HTML tags, punctuation, stopwords), handled missing values, and normalized text casing.
+2. **Text preprocessing** — tokenization and vectorization to convert raw review text into model-ready features.
+3. **Exploratory data analysis** — examined class balance, review length distribution, and common terms per sentiment class.
+4. **Model training** — trained and evaluated multiple classification models (e.g. Logistic Regression, Naive Bayes) using Scikit-learn.
+5. **Web app** — built a lightweight web interface for real-time sentiment prediction on new review text.
 
-## ⚙️ Tech Stack
+## Results
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Python (Flask / FastAPI)
-- **ML/NLP**: Scikit-learn, Pandas, NLTK
-- **Visualization**: Matplotlib / Seaborn (for graph result)
+- Classified customer reviews into Positive / Negative / Neutral with strong accuracy on the test set.
+- Surfaced recurring negative-sentiment keywords useful for product improvement discussions.
 
----
+## Tech Stack
 
-## 🧪 How It Works
+`Python` · `Pandas` · `NumPy` · `Scikit-learn` · `NLTK` · `Flask/Streamlit` (web app) · `Jupyter Notebook`
 
-1. User inputs text or uploads a CSV file.
-2. The model processes the text using NLP.
-3. Predicts sentiment: `Positive`, `Negative`, or `Neutral`.
-4. Shows prediction result and plots sentiment distribution graph.
-
-## 🚀 Setup Instructions
+## How to Run
 
 ```bash
-# Clone the repo
-git clone https://github.com/Arfat-sharda/sentiment-analysis.git
-cd sentiment-analysis!
-
-
-# Install dependencies
+git clone https://github.com/rkdatasci/Sentiment-Analysis.git
+cd Sentiment-Analysis
 pip install -r requirements.txt
+python app.py        # or streamlit run app.py, depending on your setup
+```
 
-# Run the app
-python app.py
+## What I'd Improve Next
 
-📬 Connect with Me
-📧 syedarfat0305@gmail.com || rajshriwastav889@gmail.com
+- Fine-tune a transformer-based model (e.g. DistilBERT) for higher accuracy
+- Add confidence scores alongside predictions in the web app
+- Deploy live (Streamlit Community Cloud / Render) and link the demo here
 
-
-
+---
+**Author:** Raj Kumar — [LinkedIn](https://www.linkedin.com/in/raj-kumar-0841ba294/) · [GitHub](https://github.com/rkdatasci)
